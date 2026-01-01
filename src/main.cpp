@@ -142,8 +142,9 @@ void run(Model& model, Config& cfg) {
             if (ch == KEY_DOWN) al -= 0.1f;
         }
 
-        if (ch == '+') zoom *= 1.1f;
+        if (ch == '+' || ch == '=') zoom *= 1.1f;
         if (ch == '-') zoom *= 0.9f;
+        zoom = std::clamp(zoom, 0.1f, 10.0f);
         
         // timing
         next_frame += std::chrono::microseconds(frame_us);
