@@ -27,7 +27,7 @@ namespace {
             return;
         }
 
-        int i1, i2, i3;
+        int i1 = 0, i2 = 1, i3 = 2;
         for (size_t t = 0; t < n; ++t) {
             i1 = (n/2 + t + n - 1) % n;
             i2 = (n/2 + t) % n;
@@ -283,10 +283,14 @@ void Model::normalize() {
     if (vertices.empty()) return;
     
     Vec3 minV = vertices[0], maxV = vertices[0];
-    for(const auto& v : vertices) {
-        if(v.x < minV.x) minV.x = v.x; if(v.x > maxV.x) maxV.x = v.x;
-        if(v.y < minV.y) minV.y = v.y; if(v.y > maxV.y) maxV.y = v.y;
-        if(v.z < minV.z) minV.z = v.z; if(v.z > maxV.z) maxV.z = v.z;
+    for (auto& v : vertices) {
+        minV.x = std::min(minV.x, v.x);
+        minV.y = std::min(minV.y, v.y);
+        minV.z = std::min(minV.z, v.z);
+
+        maxV.x = std::max(maxV.x, v.x);
+        maxV.y = std::max(maxV.y, v.y);
+        maxV.z = std::max(maxV.z, v.z);
     }
     
     Vec3 center = (minV + maxV) * 0.5f;
