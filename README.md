@@ -1,6 +1,12 @@
-# voxcii
+<h1 align="center">voxcii</h1>
 
+<p align="center">
 Terminal-based ASCII 3D model viewer written in C++
+</p>
+
+<p align="center">
+<img src="https://github.com/user-attachments/assets/540dbbcf-1fdb-4e7d-a7fb-486366302226" width="70%" />
+</p>
 
 ---
 
@@ -13,8 +19,6 @@ Terminal-based ASCII 3D model viewer written in C++
 * Polygon triangulation for complex OBJ faces
 * Optional material colors (when supported)
 * Automatic rotation or interactive mode
-
----
 
 ## Build
 
@@ -34,8 +38,6 @@ Or with Makefile:
 ```
 make
 ```
-
----
 
 ## Usage
 
@@ -64,10 +66,26 @@ make
 * `.obj` (with optional `.mtl` material colors)
 * `.stl` (ASCII and binary)
 
----
-
 ## Notes
 
 * Output quality depends on terminal size and font
 * Color support depends on terminal + ncurses capabilities
 * OBJ material colors require the `.mtl` file to be present
+
+## Contributing
+
+PRs and issues are welcome
+
+<br>
+
+<p align="center">
+	<img src="https://raw.githubusercontent.com/catppuccin/catppuccin/main/assets/footers/gray0_ctp_on_line.svg?sanitize=true" />
+</p>
+
+<p align="center">
+        <i><code>&copy 2025-present <a href="https://github.com/ashish0kumar">Ashish Kumar</a></code></i>
+</p>
+
+<div align="center">
+<a href="https://github.com/ashish0kumar/voxcii/blob/main/LICENSE"><img src="https://img.shields.io/github/license/ashish0kumar/voxcii?style=for-the-badge&color=CBA6F7&logoColor=cdd6f4&labelColor=302D41" alt="LICENSE"></a>&nbsp;&nbsp;
+</div>
