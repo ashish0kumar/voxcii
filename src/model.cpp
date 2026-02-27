@@ -1,4 +1,5 @@
 #include "model.hpp"
+#include <cstdint>
 #include <fstream>
 #include <sstream>
 #include <iostream>
