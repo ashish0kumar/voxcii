@@ -26,7 +26,7 @@ int Surface::idxY(float y) const {
 
 void Surface::drawTriangle(const Triangle& inTri, char c, int mat_idx) {
     // basic orientation culling
-    if ((inTri.p2.x - inTri.p1.x) * (inTri.p3.y - inTri.p2.y) >= 
+    if ((inTri.p2.x - inTri.p1.x) * (inTri.p3.y - inTri.p2.y) < 
         (inTri.p3.x - inTri.p2.x) * (inTri.p2.y - inTri.p1.y)) return;
 
     // sort by X for scanning
