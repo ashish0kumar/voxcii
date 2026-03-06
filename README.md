@@ -20,6 +20,14 @@ Terminal-based ASCII 3D model viewer written in C++
 * Optional material colors (when supported)
 * Automatic rotation or interactive mode
 
+## Installation
+
+### AUR
+
+```bash
+yay -S voxcii-git
+```
+
 ## Build
 
 ### Requirements
