@@ -47,6 +47,27 @@ Or with Makefile:
 make
 ```
 
+### Nix
+
+Build and run the pinned package:
+
+```bash
+nix build
+./result/bin/voxcii models/bunny.obj
+```
+
+Run without creating a `result` symlink:
+
+```bash
+nix run . -- models/bunny.obj
+```
+
+Enter a development shell containing the compiler and ncurses:
+
+```bash
+nix develop
+```
+
 ## Usage
 
 ```
