@@ -2,15 +2,16 @@
   stdenv,
   lib,
   ncurses,
+  src ? null,
 }:
+
+assert src != null;
 
 stdenv.mkDerivation {
   pname = "voxcii";
   version = "0-unstable-2026-03-07";
 
-  # Supplied by the flake overlay so this derivation remains reusable.
-  src = null;
-
+  inherit src;
   buildInputs = [ ncurses ];
 
   installPhase = ''
